@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="4 5 118 118" role="img" aria-label="YeetSoft">
+  <title>YeetSoft</title>
+  <rect x="4" y="5" width="118" height="118" rx="26" fill="#FAF7F2"/>
+  <path d="M22 22 L98 76 M70 22 L98 76" fill="none" stroke="#FF5A1F" stroke-width="3" stroke-linecap="round"/>
+  <path d="M22 22 L46 58 L70 22 M46 58 L46 106" fill="none" stroke="#14120F" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="98" cy="76" r="12" fill="#FF5A1F"/>
+</svg>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>YeetSoft — Yeet the subscription.</title>
+<meta name="description" content="A software group for the people. We ship small, useful tools that are free or yours for one payment — never rented.">
+<meta name="theme-color" content="#FF5A1F">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #FAF7F2;
+  --ink: #14120F;
+  --muted: #4A4640;
+  --rule: #E3DCD0;
+  --primary: #FF5A1F;
+
+  --sans: "Bricolage Grotesque", "Arial Narrow", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  /* Fluid between the two mockups: 24px @ 390px wide → 80px @ 1280px wide. */
+  --gutter: clamp(24px, calc(6.292vw - 0.54px), 80px);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  /* Header is flush to the top edge; the page fills the viewport on short content. */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ─── Header ─────────────────────────────────────────────────────────── */
+
+.masthead {
+  background: var(--primary);
+  color: var(--ink);
+  padding: 28px var(--gutter) 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand svg {
+  width: 36px;
+  height: 36px;
+  flex: none;
+}
+
+.brand-name {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.hero h1 {
+  margin: 0;
+  /* Fluid between the two mockups: 46px @ 390px wide → 84px @ 1280px wide. */
+  font-size: clamp(46px, calc(4.27vw + 29.35px), 84px);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+
+.hero p {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.4;
+  max-width: 720px;
+  text-wrap: pretty;
+}
+
+/* ─── Shipped list ───────────────────────────────────────────────────── */
+
+.shipped {
+  padding: 32px var(--gutter) 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.shipped h2 {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--ink);
+}
+
+.tools {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tools li {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--rule);
+  break-inside: avoid;
+}
+
+.tools a {
+  font-family: var(--mono);
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  /* Bleeds the hover fill just past the text, as in the design. */
+  padding: 0 2px;
+  margin: 0 -2px;
+}
+
+.tools a:hover {
+  background-color: var(--primary);
+  text-decoration: none;
+}
+
+.tools .name {
+  font-family: var(--mono);
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--ink);
+}
+
+.tools .soon {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  padding: 1px 7px;
+  white-space: nowrap;
+}
+
+.tools a:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+  text-decoration: none;
+}
+
+.tools .blurb {
+  font-size: 15px;
+  line-height: 1.4;
+  color: var(--muted);
+}
+
+/* ─── Tablet: name and blurb share a baseline, still one column ──────── */
+
+@media (min-width: 640px) {
+  .tools li {
+    flex-direction: row;
+    align-items: baseline;
+    gap: 12px;
+    padding: 11px 0;
+  }
+  .tools a, .tools .name { font-size: 17px; white-space: nowrap; }
+  .tools .blurb { font-size: 17px; line-height: 1.35; }
+}
+
+/* ─── Desktop: the mockup's larger mark, wordmark and type scale ─────── */
+
+@media (min-width: 900px) {
+  .masthead {
+    padding-top: 48px;
+    padding-bottom: 60px;
+    gap: 36px;
+  }
+  .brand { gap: 14px; }
+  .brand svg { width: 48px; height: 48px; }
+  .brand-name { font-size: 30px; }
+
+  .hero { gap: 20px; }
+  .hero h1 { line-height: 0.98; letter-spacing: -0.035em; }
+  .hero p { font-size: 22px; }
+
+  .shipped {
+    padding-top: 40px;
+    padding-bottom: 48px;
+    gap: 20px;
+  }
+  .shipped h2 { font-size: 13px; padding-bottom: 12px; }
+}
+
+/* ─── Wide: split the list into two columns ──────────────────────────────
+   Held back until each column can hold a name and blurb on one line, as
+   the desktop mockup does; narrower than this it reads better as one
+   column. Column fill is top-to-bottom, so the order matches the mockup. */
+
+@media (min-width: 1180px) {
+  .tools {
+    columns: 2;
+    column-gap: 56px;
+  }
+}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="brand">
+    <svg viewBox="0 0 120 120" role="img" aria-label="YeetSoft">
+      <path d="M22 22 L46 58 L70 22 M46 58 L46 106" fill="none" stroke="#14120F" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M22 22 L98 76 M70 22 L98 76" fill="none" stroke="#FAF7F2" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="98" cy="76" r="12" fill="#FAF7F2"/>
+    </svg>
+    <span class="brand-name">YeetSoft</span>
+  </div>
+
+  <div class="hero">
+    <h1>Yeet the subscription.</h1>
+    <p>A software group for the people. We ship small, useful tools that are free or yours for one payment — never rented.</p>
+  </div>
+</header>
+
+<main>
+  <section class="shipped">
+    <h2>Shipped so far</h2>
+
+    <ul class="tools">
+      <li><a href="https://yeetsoft.github.io/pages/binary-clock/">Binary Clock</a><span class="blurb">Tells the time in binary, lit like old Edison bulbs.</span></li>
+      <li><a href="https://yeetsoft.github.io/pages/imprint/">Imprint</a><span class="blurb">Design a book cover, export the print-ready PDF.</span></li>
+      <li><span class="name">Redline</span><span class="blurb">Mark up PDFs and images in the browser. <span class="soon">Soon</span></span></li>
+      <li><span class="name">Keepsake</span><span class="blurb">Compile a life's worth of stories into a book. <span class="soon">Soon</span></span></li>
+      <li><span class="name">IsoKeys</span><span class="blurb">One audio sample in, a playable instrument out. <span class="soon">Soon</span></span></li>
+    </ul>
+  </section>
+</main>
+
+</body>
+</html>
