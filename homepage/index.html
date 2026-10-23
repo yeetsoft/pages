@@ -148,26 +148,6 @@ body {
   text-decoration: none;
 }
 
-.tools .name {
-  font-family: var(--mono);
-  font-weight: 600;
-  font-size: 16px;
-  color: var(--ink);
-}
-
-.tools .soon {
-  font-family: var(--mono);
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--muted);
-  border: 1px solid var(--rule);
-  border-radius: 999px;
-  padding: 1px 7px;
-  white-space: nowrap;
-}
-
 .tools a:focus-visible {
   outline: 2px solid var(--ink);
   outline-offset: 2px;
@@ -189,7 +169,7 @@ body {
     gap: 12px;
     padding: 11px 0;
   }
-  .tools a, .tools .name { font-size: 17px; white-space: nowrap; }
+  .tools a { font-size: 17px; white-space: nowrap; }
   .tools .blurb { font-size: 17px; line-height: 1.35; }
 }
 
@@ -253,13 +233,14 @@ body {
     <h2>Shipped so far</h2>
 
     <ul class="tools">
+      <!-- projects:start -->
       <li><a href="https://pages.yeetsoft.net/binary-clock/">Binary Clock</a><span class="blurb">Tells the time in binary, lit like old Edison bulbs.</span></li>
-      <li><a href="https://pages.yeetsoft.net/imprint/">Imprint</a><span class="blurb">Design a book cover, export the print-ready PDF.</span></li>
-      <li><span class="name">Redline</span><span class="blurb">Mark up PDFs and images in the browser. <span class="soon">Soon</span></span></li>
-      <li><span class="name">Keepsake</span><span class="blurb">Compile a life's worth of stories into a book. <span class="soon">Soon</span></span></li>
-      <li><a href="https://pages.yeetsoft.net/warp/">IsoKeys</a><span class="blurb">One audio sample in, a playable instrument out.</span></li>
-      <li><a href="https://pages.yeetsoft.net/eggsponential/">Eggsponential</a><span class="blurb">An infinite egg clicker with very happy hens.</span></li>
       <li><a href="https://pages.yeetsoft.net/eggmarket/">Eggmarket</a><span class="blurb">Buy low, sell high, dodge the egg bust.</span></li>
+      <li><a href="https://pages.yeetsoft.net/eggsponential/">Eggsponential</a><span class="blurb">An infinite egg clicker with very happy hens.</span></li>
+      <li><a href="https://pages.yeetsoft.net/imprint/">Imprint</a><span class="blurb">Design a book cover, export the print-ready PDF.</span></li>
+      <li><a href="https://pages.yeetsoft.net/warp/">IsoKeys</a><span class="blurb">One audio sample in, a playable instrument out.</span></li>
+      <li><a href="https://pages.yeetsoft.net/redline/">Redline</a><span class="blurb">Mark up PDFs and images in the browser.</span></li>
+      <!-- projects:end -->
     </ul>
   </section>
 </main>
